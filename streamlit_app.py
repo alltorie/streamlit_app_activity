@@ -80,7 +80,7 @@ def main():
         C = st.sidebar.number_input("C (Regularization parameter)", 0.01, 10.0, step=0.01, key='C_LR')
         max_iter = st.sidebar.slider("Maximum number of iterations", 100, 500, key='max_iter')
 
-        metrics = st.sidebar.multiselect("What metrics to plot?",('Confusion Matrix', 'ROC Curve', 'Precision-Recall Curve'))
+        metrics = st.sidebar.multiselect("What metrics to plot?",('Confusion Matrix', 'ROC Curve', 'Precision-Recall Curve'), key="metrics selector")
         
         if st.sidebar.button("Classify", key='classify'):
             st.subheader("Logistics Regression Results")
@@ -137,6 +137,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
