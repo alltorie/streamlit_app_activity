@@ -20,7 +20,7 @@ def main():
 
     @st.cache_data
     def load_data():
-        data = pd.read_csv(r"C:\Users\teneb\Downloads\mushroom_data_all.csv")
+        data = pd.read_csv("https://raw.githubusercontent.com/alltorie/streamlit_app_activity/refs/heads/main/mushroom_data_all.csv")
         label = LabelEncoder()
         for col in data.columns:
             data[col] = label.fit_transform(data[col])
@@ -137,6 +137,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
