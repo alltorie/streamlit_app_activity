@@ -10,6 +10,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay
 from sklearn.metrics import precision_score, recall_score
 
+data = pd.read_csv("mushroom_data_all.csv")
+
 def main():
     st.title("Binary Classification Web App")
     st.sidebar.title("Binary Classification Web App")
@@ -135,3 +137,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
